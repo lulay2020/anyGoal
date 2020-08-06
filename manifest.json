@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "anyGoal",
+	"description": "Your assistant for everyday tasks",
+	"version": "1.0.0",
+	"icons": {"128": "images/logo-128.jpg"},
+	"browser_action": {
+		"default_icon": "images/logo.jpg",
+		"default_popup": "index.html"
+	},
+	"permissions": [
+		"tabs",
+		"storage",
+		"geolocation"
+	],
+	"chrome_url_overrides": {
+		"newtab": "index.html"
+	}
+}

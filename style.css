@@ -1,0 +1,182 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: no-repeat center/cover;
+	font-family: 'Quicksand', sans-serif;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: #fff;
+	height: 100vh;
+}
+
+nav{
+	position: absolute;
+	left: 12px;
+	top: 12px;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	padding: .3em;
+}
+
+h1{
+	margin-bottom: 3rem;
+}
+
+h2{
+	margin-bottom: .5rem;
+	opacity: .6;
+}
+
+table{
+	text-align: left;
+	margin: 10px;
+	min-width: 22vw;
+	font-size: 1em;
+	opacity: .8;
+}
+
+table th{
+	font-size: 1.22rem;
+}
+
+table tr td, table tr th{
+	border: 2px solid #fff;
+	padding: .5em;
+	font-weight: bold;
+}
+
+td span{
+	color: #e74c3c;
+	height: 20px;
+	margin-right: 20px;
+	text-align: center;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+td:hover span{
+	width: 20px;
+	opacity: 1.0;
+}
+
+#temp{
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+
+#time{
+	font-size: 8rem
+}
+
+#focus{
+	border-bottom: 1.22px solid #000;
+	width: 22vw;
+	font-size: 1.25em;
+	padding-bottom: 7px;
+}
+
+#bento img{
+	width: 22px;
+}
+
+#bento{
+	display: inline;
+}
+
+.hidden-div{
+	position: absolute;
+	margin: .5em;
+	background-color: #fff;
+	border-radius: 4px;
+	display: none;
+	min-width: 20vw;
+	min-height: 35vh;
+	box-shadow: 4px 2px 16px -7px #000;
+}
+
+#links{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: .3em;
+}
+
+.quick-links.hidden-div{
+	color: #000;
+}
+
+#add-link-form{
+	position: absolute;
+	top: 14em;
+	padding: 3em;
+}
+
+#add-link-form input{
+	padding: .45em;
+	border-radius: 5px;
+	border: none;
+}
+
+.add-link-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	padding: .3em;
+}
+
+.add-link-container a{
+	font-size: 2em;
+}
+
+.display{
+	display: block;
+}
+
+#temp-section{
+	cursor: pointer;
+}
+
+[contenteditable~="true"] {
+	outline: none;
+}
+
+.fa-times{
+	color: #e74c3c;
+	height: 20px;
+	margin-right: 12px;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+.link-container:hover .fa-times{
+	opacity: 1.0;
+	color: red;
+}
+
+@media(max-width: 700px) {
+	#time{
+		font-size: 5rem;
+	}
+
+	body{
+		padding: .9em;
+		font-size: .7em;
+	}
+
+	#focus{
+		width: 28vw;
+	}
+}
